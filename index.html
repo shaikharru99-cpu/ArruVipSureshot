@@ -3,104 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ustad Number King</title>
+<title>Jai Club Tool</title>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-/* Card */
-.container {
-    width: 320px;
-    background: #0a0a0a;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(255, 200, 0, 0.2);
-    border: 1px solid rgba(255, 200, 0, 0.2);
+body{
+    background: radial-gradient(circle at top,#0a1a2f,#020814);
+    color:white;
+    text-align:center;
 }
 
-/* Title */
-.title {
-    color: #f5d97c;
-    font-size: 18px;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+/* Container */
+.container{
+    padding:30px 20px;
 }
 
-/* Profile Image */
-.profile {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    border: 3px solid gold;
-    margin: auto;
-    overflow: hidden;
+/* Logo */
+.logo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:4px solid gold;
+    box-shadow:0 0 25px gold;
 }
 
-.profile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Heading */
+h1{
+    margin-top:15px;
+    font-size:28px;
+    font-weight:700;
 }
 
-/* Offer */
-.offer {
-    color: #00ff88;
-    font-weight: bold;
-    margin: 15px 0;
+.sub{
+    color:#fbc02d;
+    margin-top:5px;
+    font-weight:600;
 }
 
-/* Timer */
-.timer {
-    font-size: 32px;
-    color: #fff;
-    margin: 10px 0;
+.desc{
+    margin-top:10px;
+    color:#ccc;
+    font-size:14px;
 }
 
-/* Live */
-.live {
-    background: #111;
-    padding: 8px;
-    border-radius: 10px;
-    color: #aaa;
-    font-size: 13px;
-    margin-bottom: 15px;
+/* Timer Box */
+.timer{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    background:#111;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(255,215,0,0.3);
 }
 
-/* Buttons */
-.btn {
-    display: block;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
+.time-box{
+    text-align:center;
 }
 
-.btn-join {
-    background: linear-gradient(90deg, gold, #f5d97c);
-    color: #000;
+.time{
+    font-size:22px;
+    font-weight:700;
+    color:#fbc02d;
 }
 
-.btn-claim {
-    border: 1px solid gold;
-    color: gold;
+.label{
+    font-size:12px;
+    color:#aaa;
+}
+
+/* Button */
+.btn{
+    margin-top:25px;
+    display:inline-block;
+    background:linear-gradient(45deg,#ffb300,#ff6f00);
+    padding:15px 25px;
+    border-radius:12px;
+    font-weight:700;
+    color:black;
+    text-decoration:none;
+    box-shadow:0 0 15px #ffb300;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
 }
 
 /* Footer */
-.footer {
-    font-size: 10px;
-    color: #555;
-    margin-top: 10px;
+.footer{
+    margin-top:30px;
+    font-size:12px;
+    color:#777;
 }
 </style>
 </head>
@@ -109,36 +113,69 @@ body {
 
 <div class="container">
 
-    <div class="title">USTAD NUMBER KING</div>
+    <!-- Logo -->
+    <img src="https://i.ibb.co/7V9xZJk/logo.png" class="logo">
 
-    <div class="profile">
-        <img src="https://i.imgur.com/8Km9tLL.jpg">
+    <h1>Jai Club Tool</h1>
+    <div class="sub">Recover All Your Losses</div>
+    <div class="sub">Get 95% Accurate Shots 🔥</div>
+
+    <div class="desc">
+        Join my exclusive Telegram group for premium tips, live market updates & VIP strategies!
     </div>
 
-    <div class="offer">⚡ DAILY ₹2000 FREE GIFTCODE 💰</div>
+    <!-- Timer -->
+    <div class="timer">
+        <div class="time-box">
+            <div class="time" id="days">00</div>
+            <div class="label">DAYS</div>
+        </div>
+        <div class="time-box">
+            <div class="time" id="hours">00</div>
+            <div class="label">HOURS</div>
+        </div>
+        <div class="time-box">
+            <div class="time" id="minutes">00</div>
+            <div class="label">MINS</div>
+        </div>
+        <div class="time-box">
+            <div class="time" id="seconds">00</div>
+            <div class="label">SECS</div>
+        </div>
+    </div>
 
-    <div class="timer" id="countdown">00:30</div>
+    <div style="margin-top:15px;color:#fbc02d;">
+        👇 Click below before link expires 👇
+    </div>
 
-    <div class="live">🔴 LIVE • 263 USERS IN VC</div>
+    <!-- Button -->
+    <a href="https://t.me/+yFTwwy2Zu-I3NTI1" class="btn">
+        🚀 JOIN FREE TELEGRAM
+    </a>
 
-    <a href="#" class="btn btn-join">JOIN VIP NOW</a>
-
-    <a href="#" class="btn btn-claim">CLAIM GIFTCODE</a>
-
-    <div class="footer">ADS BY TG @TOPSADAGENCY</div>
+    <div class="footer">
+        ADS MANAGED BY TG @OpARRU
+    </div>
 
 </div>
 
 <script>
-let time = 30;
-let countdown = document.getElementById("countdown");
+// Countdown Timer (5 minutes)
+let time = 5 * 60;
 
-setInterval(() => {
-    if (time > 0) {
-        time--;
-        countdown.innerText = "00:" + (time < 10 ? "0" + time : time);
-    }
-}, 1000);
+setInterval(()=>{
+    let days = Math.floor(time / 86400);
+    let hours = Math.floor((time % 86400) / 3600);
+    let minutes = Math.floor((time % 3600) / 60);
+    let seconds = time % 60;
+
+    document.getElementById("days").innerText = String(days).padStart(2,'0');
+    document.getElementById("hours").innerText = String(hours).padStart(2,'0');
+    document.getElementById("minutes").innerText = String(minutes).padStart(2,'0');
+    document.getElementById("seconds").innerText = String(seconds).padStart(2,'0');
+
+    if(time > 0) time--;
+},1000);
 </script>
 
 </body>
