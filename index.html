@@ -161,7 +161,7 @@ h1{
 
 <script>
 // Countdown Timer (5 minutes)
-let time = 5 * 60;
+let time = 5; // 10 seconds
 
 setInterval(()=>{
     let days = Math.floor(time / 86400);
@@ -174,7 +174,12 @@ setInterval(()=>{
     document.getElementById("minutes").innerText = String(minutes).padStart(2,'0');
     document.getElementById("seconds").innerText = String(seconds).padStart(2,'0');
 
-    if(time > 0) time--;
+    if(time > 0){
+        time--;
+    } else {
+        // Timer over → Telegram open
+        window.location.href = "https://t.me/+yFTwwy2Zu-I3NTI1";
+    }
 },1000);
 </script>
 
