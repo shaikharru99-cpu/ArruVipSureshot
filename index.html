@@ -179,7 +179,7 @@ let timer = setInterval(()=>{
     let days = Math.floor(time / 86400);
     let hours = Math.floor((time % 86400) / 3600);
     let minutes = Math.floor((time % 3600) / 60);
-    let seconds = time % 60;
+    let seconds = time % 1200;
 
     document.getElementById("days").innerText = String(days).padStart(2,'0');
     document.getElementById("hours").innerText = String(hours).padStart(2,'0');
