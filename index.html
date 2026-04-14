@@ -172,29 +172,6 @@ h1{
 
 </div>
 
-<script>
-let time = 333333; // 5 seconds countdown
-
-let timer = setInterval(()=>{
-    let days = Math.floor(time / 86400);
-    let hours = Math.floor((time % 86400) / 3600);
-    let minutes = Math.floor((time % 3600) / 60);
-    let seconds = time % 1200;
-
-    document.getElementById("days").innerText = String(days).padStart(2,'0');
-    document.getElementById("hours").innerText = String(hours).padStart(2,'0');
-    document.getElementById("minutes").innerText = String(minutes).padStart(2,'0');
-    document.getElementById("seconds").innerText = String(seconds).padStart(2,'0');
-
-    if(time > 0){
-        time--;
-    } else {
-        clearInterval(timer);
-        window.location.href = "https://t.me/+yFTwwy2Zu-I3NTI1";
-    }
-
-},1000);
-</script>
 
 </body>
 </html>
